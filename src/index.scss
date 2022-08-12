@@ -1,0 +1,138 @@
+* {
+  font-family: 'Fira Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #3b3d3f;
+  color: #50fa7b;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.appStyles {
+  margin: 50px auto;
+  width: 480px;
+  .container {
+    background: #1d1e26;
+    border: 4px solid #45aae8;
+    border-radius: 6px;
+    padding: 25px;
+  }
+}
+
+.productsStyles {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  width: 80px;
+  margin: 0 auto 25px;
+}
+
+.navStyles {
+  margin-bottom: 25px;
+  a {
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    &.active {
+      color: #b4e0ea;
+      border: 2px solid #45aae8;
+    }
+  }
+}
+
+.productCardStyles {
+display: flex;
+  color: #fff;
+  background: #2a2c37;
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 15px;
+  margin-bottom: 5px;
+  transition: transform 0.1s ease-in-out, background 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+  &:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.035);
+  }
+  .ProductCard {
+    &-Icon {
+      width: 40px;
+      margin-right: 15px;
+    }
+    &-Name {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    &-Price {
+      color: #50fa7b;
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+.Admin {
+  &-Header {
+    display: flex;
+    align-items: center;
+  }
+  &-New {
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+}
+
+.ProductEdit {
+  &-Input {
+    width: 100%;
+    border: 1px solid transparent;
+    color: rgb(22, 21, 21);
+    background: #d8d8d9;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    outline: 0;
+    &:focus {
+      border-color: #50fa7b;
+    }
+  }
+  &-Textarea {
+    min-height: 80px;
+    resize: none;
+  }
+  &-Button {
+    border: 2px solid #50fa7b;
+    color: #50fa7b;
+    background: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    outline: 0;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+.Product-Button {
+  border: 2px solid #50fa7b;
+  color: #50fa7b;
+  background: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  border-radius: 6px;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
