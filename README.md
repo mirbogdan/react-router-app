@@ -19,6 +19,9 @@ cd react-router-app
 # install the project dependencies with npm
 npm install
 
+# to start the project (both backend server and react app)
+npm start 
+
 # the app should open on http://localhost:3000/
 ```
 
