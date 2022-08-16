@@ -25,8 +25,8 @@ const Product = () => {
   return (
     <div>
       <h1>{product.name}</h1>
-      <p>{product.description}</p>
-      <p>{product.price}</p>
+      <p>Description: {product.description}</p>
+      <p>Price:{` € ${product.price / 100}`}</p>
       <button className="Product-Button" onClick={() => navigate(-1)}>
         Back
       </button>

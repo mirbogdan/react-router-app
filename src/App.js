@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   BrowserRouter as Router,
@@ -9,10 +9,13 @@ import {
 import Products from "./Products/Products";
 import Admin from "./Admin/Admin";
 import Nav from "./Common/Nav";
+import ProtectedRoute from "./Common/ProtectedRoute";
 import ProductsIndex from "./Products/ProductsIndex";
 import Product from "./Products/Product";
 
 const App = () => {
+  //switch to false and you can not enter admin page, redirects to  "/"
+  const [authenticated] = useState(true);
   return (
     <div className="appStyles">
       <Router>
@@ -23,7 +26,11 @@ const App = () => {
               <Route path="/" element={<ProductsIndex />} />
               <Route path=":id" element={<Product />} />
             </Route>
-            <Route path="/admin" element={<Admin />} />
+            <ProtectedRoute
+              path="/admin*"
+              element={<Admin />}
+              authenticated={authenticated}
+            />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
